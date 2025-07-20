@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Animated Web Page</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harish's Animated Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="hero-section">
-    <h1>Welcome to My Animated Page</h1>
-    <p>Everything is hosted online. No downloads required!</p>
-    <a href="#gallery" class="btn">Explore Gallery</a>
+  <header class="hero">
+    <h1>Hi, I'm Harish 👋</h1>
+    <p>Welcome to my animated website built with just HTML & CSS.</p>
+    <a href="#features" class="btn">Explore My Work</a>
   </header>
 
-  <section class="gallery-section" id="gallery">
-    <h2>Image Gallery</h2>
-    <div class="gallery">
-      <img src="https://picsum.photos/id/1015/300/200" alt="Nature 1">
-      <img src="https://picsum.photos/id/1025/300/200" alt="Nature 2">
-      <img src="https://picsum.photos/id/1040/300/200" alt="Nature 3">
-      <img src="https://picsum.photos/id/1050/300/200" alt="Nature 4">
+  <section class="features" id="features">
+    <h2>What This Site Includes</h2>
+    <div class="feature-boxes">
+      <div class="feature">
+        <i class="fas fa-bolt"></i>
+        <h3>Speed</h3>
+        <p>Blazing fast page loads with no external JS frameworks.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-image"></i>
+        <h3>Gallery</h3>
+        <p>Images are fetched directly from the web using Picsum.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-magic"></i>
+        <h3>Animations</h3>
+        <p>Smooth transitions and hover effects throughout.</p>
+      </div>
     </div>
   </section>
 
+  <section class="gallery" id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="images">
+      <img src="https://picsum.photos/id/1025/300/200" alt="Gallery 1">
+      <img src="https://picsum.photos/id/1016/300/200" alt="Gallery 2">
+      <img src="https://picsum.photos/id/1044/300/200" alt="Gallery 3">
+      <img src="https://picsum.photos/id/1059/300/200" alt="Gallery 4">
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <h2>What People Say</h2>
+    <blockquote>
+      “This site looks awesome and loads super fast. Love the design!”<br>
+      — Someone on the Internet
+    </blockquote>
+  </section>
+
   <footer>
-    <p>Designed by You • Hosted on GitHub Pages</p>
+    <p>✨ Created with passion by <strong>Harish</strong> • Hosted on GitHub Pages ✨</p>
   </footer>
 </body>
 </html>
