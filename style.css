@@ -1,56 +1,109 @@
-*{
+/* Reset and fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    margin:0;
-    padding: 0;
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
 }
-    nav{
-    background-color: black;
-    color: aliceblue;
-    padding: 15px;
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 2s ease-in-out;
 }
-li,h1,ul{
-    display: inline;
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: slideUp 1s ease forwards;
 }
-ul{
-    margin-left: 60%;
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  animation: slideUp 1.5s ease forwards;
 }
-li{
-    color: grey;
-    cursor: pointer;
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: white;
+  color: #2575fc;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
-li:hover{
-    color: aliceblue;
+
+.btn:hover {
+  background-color: #ff6f91;
+  color: white;
+  transform: scale(1.1);
 }
-input{
-    width: 60%;
-    padding: 15px;
+
+/* Gallery Section */
+.gallery-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
 }
-.searchbar{
-    padding: 30px;
-    text-align: center;
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #444;
+  animation: fadeIn 2s ease-in;
 }
-.box{
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    display: inline-block;
-    width: 220px;
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeInUp 1s ease-in-out;
 }
-.box:hover{
-    background-color: black;
-    color: aliceblue;
+
+.gallery img {
+  width: 300px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.products{
-    text-align: center;
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
-.abt{
-    margin-top: 20px ;
-    text-align: center;
-    padding: 20px;
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
 }
-.cont{
-    padding: 20px;
-    text-align: center;
-    background-color: black;
-    color: aliceblue;
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
