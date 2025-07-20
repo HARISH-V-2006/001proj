@@ -1,4 +1,3 @@
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -6,122 +5,152 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f2f2f2;
+  background: #f9f9f9;
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
-  background: #222;
+  background: #111;
+  color: white;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navbar .logo {
-  color: #fff;
+.logo {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 20px;
+  list-style: none;
 }
-.nav-links li a {
-  color: #fff;
+.nav-links a {
+  color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
-.nav-links li a:hover, .nav-links li a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: #ff6f61;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #667eea, #764ba2);
   color: white;
-  text-align: center;
   padding: 100px 20px;
-}
-.hero.small {
-  padding: 60px 20px;
+  text-align: center;
 }
 .hero h1 {
   font-size: 3rem;
+  animation: slideDown 1s ease-out;
 }
 .hero p {
   font-size: 1.2rem;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-/* Sections */
+/* Section */
 .section {
   padding: 80px 20px;
   text-align: center;
 }
 .section.light {
-  background: #fff;
+  background: white;
 }
 .section.dark {
-  background: #444;
-  color: #eee;
+  background: #333;
+  color: white;
 }
 .section img {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
   margin-top: 20px;
-  max-width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 .section img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 300px;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+.gallery img:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
 footer {
-  background: #111;
-  color: #aaa;
+  background: #222;
+  color: white;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
 }
-footer a {
-  color: #aaa;
-  text-decoration: underline;
-}
 
-/* Blockquotes */
-blockquote {
-  background: #fafafa;
-  border-left: 5px solid #6a11cb;
-  margin: 20px auto;
-  padding: 20px;
+/* Benefits list */
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
   max-width: 600px;
-  font-style: italic;
-  color: #555;
+  text-align: left;
+}
+.benefits li {
+  padding: 10px 0;
+  font-size: 1.1rem;
 }
 
-/* Media Queries */
+/* Animations */
+.animate-fade {
+  animation: fadeIn 1.5s ease;
+}
+.animate-slide {
+  animation: slideUp 1.5s ease;
+}
+.animate-zoom {
+  animation: zoomIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+@keyframes zoomIn {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+@keyframes slideDown {
+  from {transform: translateY(-20px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
   .nav-links {
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-end;
   }
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Extra Decorative Styles */
-.hero::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #ff6f61;
-  margin: 20px auto 0;
-  border-radius: 5px;
 }
