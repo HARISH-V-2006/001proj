@@ -4,11 +4,125 @@
   <meta charset="UTF-8">
   <title>Menu | Harish</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fffbe6, #ffd6d6);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-hero {
+      background: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') no-repeat center center/cover;
+      height: 60vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 10px #000;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    .menu-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      animation: slideInUp 1s ease;
+    }
+
+    .menu-hero p {
+      font-size: 1.2rem;
+      animation: slideInUp 1.5s ease;
+    }
+
+    .menu-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    .menu-item {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.4s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-item h3 {
+      margin: 15px;
+      color: #e94e77;
+    }
+
+    .menu-item p {
+      margin: 0 15px 15px;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    nav {
+      background: #ff5e5e;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ffcccc;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav>
     <div class="logo">Harish</div>
-    <ul class="nav-links">
+    <ul>
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="menu.html">Menu</a></li>
       <li><a href="about.html">About</a></li>
@@ -16,24 +130,36 @@
     </ul>
   </nav>
 
-  <header class="hero animate-zoom">
-    <h1>Explore the Menu 📜</h1>
-    <p>Here are some creative ideas and sections I can build.</p>
-  </header>
+  <div class="menu-hero">
+    <h1>Our Delicious Menu</h1>
+    <p>Handcrafted by Harish — served with animations</p>
+  </div>
 
-  <section class="section light animate-slide">
-    <h2>Design Options</h2>
-    <ul class="benefits">
-      <li>🎨 Landing Pages</li>
-      <li>📷 Photo Galleries</li>
-      <li>📦 Product Grids</li>
-      <li>📰 Blog Layouts</li>
-    </ul>
-    <img src="https://picsum.photos/id/1060/600/300" alt="Design Menu">
+  <section class="menu-gallery">
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1604908177223-cb1f4d4531f5" alt="Pizza">
+      <h3>Italian Pizza</h3>
+      <p>Hot and cheesy pizza straight from the stone oven.</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1613145993485-1cb5f4ff3b55" alt="Burger">
+      <h3>Smash Burger</h3>
+      <p>Juicy beef patty with crispy lettuce and melted cheese.</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1600891965059-52344bdc4c8e" alt="Pasta">
+      <h3>Spaghetti Pasta</h3>
+      <p>Classic Italian pasta tossed in creamy Alfredo sauce.</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1617196039464-0d9b71ed2e00" alt="Dessert">
+      <h3>Chocolate Lava Cake</h3>
+      <p>Rich and gooey chocolate with a molten center.</p>
+    </div>
   </section>
 
   <footer>
-    <p>Back to <a href="index.html">Home</a> • Page by Harish</p>
+    Back to <a href="index.html">Home</a> • Built with ❤️ by Harish
   </footer>
 </body>
 </html>
