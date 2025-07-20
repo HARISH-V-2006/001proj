@@ -1,153 +1,127 @@
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f2f2;
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
+/* Navigation */
+.navbar {
+  background: #222;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover, .nav-links li a.active {
+  color: #ff6f61;
+}
+
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
   color: white;
   text-align: center;
   padding: 100px 20px;
-  animation: fadeIn 1.5s ease-in-out;
 }
-
+.hero.small {
+  padding: 60px 20px;
+}
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
 }
-
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-.btn {
-  background: white;
-  color: #764ba2;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: #ff6f91;
-  color: white;
-  transform: scale(1.05);
-}
-
-/* Features */
-.features {
-  padding: 60px 20px;
+/* Sections */
+.section {
+  padding: 80px 20px;
   text-align: center;
-  background: white;
 }
-
-.features h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+.section.light {
+  background: #fff;
 }
-
-.feature-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.section.dark {
+  background: #444;
+  color: #eee;
 }
-
-.feature {
-  background: #f9f9f9;
-  padding: 30px;
-  border-radius: 15px;
-  width: 250px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+.section img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
-
-.feature:hover {
-  transform: translateY(-5px);
-}
-
-.feature i {
-  font-size: 2rem;
-  color: #764ba2;
-  margin-bottom: 15px;
-}
-
-/* Gallery */
-.gallery {
-  padding: 60px 20px;
-  text-align: center;
-  background: #f0f0f0;
-}
-
-.gallery h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.images img {
-  width: 300px;
-  border-radius: 12px;
-  transition: transform 0.4s ease;
-}
-
-.images img:hover {
-  transform: scale(1.05);
-}
-
-/* Testimonial */
-.testimonial {
-  padding: 60px 20px;
-  text-align: center;
-  background: white;
-}
-
-.testimonial h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.testimonial blockquote {
-  font-style: italic;
-  color: #555;
-  background: #fefefe;
-  padding: 25px;
-  border-left: 5px solid #764ba2;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto;
+.section img:hover {
+  transform: scale(1.03);
 }
 
 /* Footer */
 footer {
-  background: #333;
-  color: white;
+  background: #111;
+  color: #aaa;
   text-align: center;
   padding: 20px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #aaa;
+  text-decoration: underline;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Blockquotes */
+blockquote {
+  background: #fafafa;
+  border-left: 5px solid #6a11cb;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Extra Decorative Styles */
+.hero::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff6f61;
+  margin: 20px auto 0;
+  border-radius: 5px;
 }
